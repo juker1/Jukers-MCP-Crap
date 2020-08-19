@@ -1,0 +1,39 @@
+// PACKAGE: gui.inventory
+// initGui method LINE 44
+// in the public void initGui method, add this line:
+
+Minecraft.getMinecraft().entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
+
+// add this line for onGuiClose method at LINE 56
+
+// EXAMPLE (BEFORE)
+
+public void onGuiClosed()
+{
+    Keyboard.enableRepeatEvents(false);
+    NetHandlerPlayClient nethandlerplayclient = this.mc.getNetHandler();
+
+    if (nethandlerplayclient != null)
+    {
+        nethandlerplayclient.addToSendQueue(new C12PacketUpdateSign(this.tileSign.getPos(), this.tileSign.signText));
+    }
+
+    this.tileSign.setEditable(true);
+}
+
+// EXAMPLE (AFTER) (ADD OVERRIDE)
+
+@Override
+public void onGuiClosed()
+{
+    Minecraft.getMinecraft().entityRenderer.loadEntityShader(null);
+    Keyboard.enableRepeatEvents(false);
+    NetHandlerPlayClient nethandlerplayclient = this.mc.getNetHandler();
+
+    if (nethandlerplayclient != null)
+    {
+        nethandlerplayclient.addToSendQueue(new C12PacketUpdateSign(this.tileSign.getPos(), this.tileSign.signText));
+    }
+
+    this.tileSign.setEditable(true);
+}
