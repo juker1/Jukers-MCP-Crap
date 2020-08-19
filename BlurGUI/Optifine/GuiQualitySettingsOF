@@ -1,5 +1,5 @@
 // THIS IS IN THE OPTIFINE PACKAGE
-// initGui method LINE 28
+// initGui method LINE 30
 // in the public void initGui method, add this line:
 
 Minecraft.getMinecraft().entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
