@@ -3,7 +3,7 @@
 
 Minecraft.getMinecraft().entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
 
-// add this method for the blur shader to stop when gui closes
+// add this method for the blur shader to stop when gui closes (DONT PUT IN INITGUI METHOD)
 
     @Override
     public void onGuiClosed() {
