@@ -1,3 +1,4 @@
+// initGui method LINE 42
 // in the public void initGui method, add this line:
 
 Minecraft.getMinecraft().entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
