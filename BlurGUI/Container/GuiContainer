@@ -1,0 +1,30 @@
+// PACKAGE: gui.inventory
+// initGui method LINE 88
+// in the public void initGui method, add this line:
+
+Minecraft.getMinecraft().entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
+
+// add this line for onGuiClose method at LINE 739
+
+// EXAMPLE (BEFORE)
+
+public void onGuiClosed()
+{
+    if (this.mc.thePlayer != null)
+    {
+        this.inventorySlots.onContainerClosed(this.mc.thePlayer);
+        super.onGuiClosed();
+    }
+}
+
+// EXAMPLE (AFTER)
+
+public void onGuiClosed()
+{
+    if (this.mc.thePlayer != null)
+    {
+        this.inventorySlots.onContainerClosed(this.mc.thePlayer);
+        Minecraft.getMinecraft().entityRenderer.loadEntityShader(null);
+        super.onGuiClosed();
+    }
+}
