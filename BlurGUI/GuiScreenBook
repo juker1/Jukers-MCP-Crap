@@ -1,0 +1,22 @@
+// initGui method LINE 113
+// in the public void initGui method, add this line:
+
+Minecraft.getMinecraft().entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
+
+// add this line for onGuiClose method at LINE 141
+
+// EXAMPLE (BEFORE)
+
+public void onGuiClosed()
+{
+    Keyboard.enableRepeatEvents(false);
+}
+
+// EXAMPLE (AFTER) (ADD OVERRIDE)
+
+@Override
+public void onGuiClosed()
+{
+    Minecraft.getMinecraft().entityRenderer.loadEntityShader(null);
+    Keyboard.enableRepeatEvents(false);
+}
