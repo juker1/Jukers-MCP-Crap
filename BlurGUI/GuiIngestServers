@@ -1,0 +1,10 @@
+// PACKAGE: gui.stream
+// initGui method LINE 29
+// in the public void initGui method, add this line:
+
+Minecraft.getMinecraft().entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
+
+// add this line to onGuiClose method LINE: 56 (DONT PUT IN INITGUI METHOD)
+// add @Override for the method
+
+Minecraft.getMinecraft().entityRenderer.loadEntityShader(null);
