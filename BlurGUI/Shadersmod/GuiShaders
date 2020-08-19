@@ -1,0 +1,10 @@
+// PACKAGE: shadersmod.client
+// Shaders button that you see in Video Settings
+// initGui method LINE 42
+// in the public void initGui method, add this line:
+
+Minecraft.getMinecraft().entityRenderer.loadShader(new ResourceLocation("shaders/post/blur.json"));
+
+// Add this line below for the built-in onGuiClose method at LINE 335
+
+Minecraft.getMinecraft().entityRenderer.loadEntityShader(null);
