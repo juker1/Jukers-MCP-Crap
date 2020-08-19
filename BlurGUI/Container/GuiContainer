@@ -17,8 +17,9 @@ public void onGuiClosed()
     }
 }
 
-// EXAMPLE (AFTER)
+// EXAMPLE (AFTER) (ADD OVERRIDE)
 
+@Override
 public void onGuiClosed()
 {
     if (this.mc.thePlayer != null)
