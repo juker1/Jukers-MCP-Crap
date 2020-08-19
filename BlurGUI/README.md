@@ -1,0 +1,2 @@
+# I've included all containers and menus
+I KNOW THAT IT WILL TAKE A WHILE TO SETUP, I'M SORRY BUT THAT'S IF YOU WANT BLUR FOR ALL MENUS!
